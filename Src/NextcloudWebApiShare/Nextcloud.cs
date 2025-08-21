@@ -17,7 +17,12 @@ public class Nextcloud : JsonService
     {
         WebServiceException.ThrowIfNotConnected(client);
 
-        var res = await GetStringAsync("ocs/v1.php/cloud/capabilities", cancellationToken);
+        //var res = await GetStringAsync("ocs/v1.php/cloud/capabilities", cancellationToken);
+
+
+        // 31.0.6
+        var res2 = await GetStringAsync("index.php/apps/files/files", cancellationToken);
+
         return "0.0.0";
     }
 

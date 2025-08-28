@@ -1,4 +1,7 @@
-﻿namespace NextcloudWebApi;
+﻿using System.Xml;
+using System.Xml.XPath;
+
+namespace NextcloudWebApi;
 
 // https://docs.nextcloud.com/server/22/developer_manual/client_apis/OCS/ocs-api-overview.html#capabilities-api
 
@@ -17,13 +20,12 @@ public class Nextcloud : JsonService
     {
         WebServiceException.ThrowIfNotConnected(client);
 
-        //var res = await GetStringAsync("ocs/v1.php/cloud/capabilities", cancellationToken);
+        // https://nc.elektrobit.com/status.php
 
+        var res = await GetFromJsonAsync<StatusModel>("status.php", cancellationToken);
 
-        // 31.0.6
-        var res2 = await GetStringAsync("index.php/apps/files/files", cancellationToken);
-
-        return "0.0.0";
+       
+        return res?.VersionString ?? "0.0.0";
     }
 
     public async Task<Health?> GetHealthAsync(CancellationToken cancellationToken = default)

@@ -11,6 +11,6 @@
     )]
 
 [JsonSerializable(typeof(HealthModel))]
-
+[JsonSerializable(typeof(StatusModel))]
 internal partial class SourceGenerationContext : JsonSerializerContext
 { }

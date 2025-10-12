@@ -1,0 +1,1 @@
+nuget pack NextcloudWebApi.nuspec -properties Configuration=Release

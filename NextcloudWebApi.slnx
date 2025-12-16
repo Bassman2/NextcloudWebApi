@@ -1,10 +1,12 @@
 <Solution>
   <Folder Name="/Src/">
+    <Project Path="Src/NextcloudWebApi100/NextcloudWebApi100.csproj" />
     <Project Path="Src/NextcloudWebApi80/NextcloudWebApi80.csproj" />
     <Project Path="Src/NextcloudWebApi90/NextcloudWebApi90.csproj" />
     <Project Path="Src/NextcloudWebApiShare/NextcloudWebApiShare.shproj" />
   </Folder>
   <Folder Name="/Test/">
+    <Project Path="Test/NextcloudWebApiUnitTest100/NextcloudWebApiUnitTest100.csproj" />
     <Project Path="Test/NextcloudWebApiUnitTest80/NextcloudWebApiUnitTest80.csproj" Id="a8bbbcca-a7fc-4dcc-97b7-ba5482e02e39" />
     <Project Path="Test/NextcloudWebApiUnitTest90/NextcloudWebApiUnitTest90.csproj" Id="711010d3-406e-4988-b9e4-4e7ec46102b9" />
     <Project Path="Test/NextcloudWebApiUnitTestShare/NextcloudWebApiUnitTestShare.shproj" Id="c5d48cba-042d-4dca-a136-a99f0172f69d" />
